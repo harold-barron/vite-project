@@ -11,7 +11,6 @@ jobs:
     uses: harold-barron/actions/.github/workflows/buildNodeJs_StaticWebapp.yaml@main
     with:
       package-path: .
-    env:
       hasWebConfig: false
 
   deploy:

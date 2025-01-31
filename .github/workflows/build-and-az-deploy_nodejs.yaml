@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    uses: harold-barron/actions/.github/workflows/build_Node.yaml@main
+    uses: harold-barron/actions/.github/workflows/buildNodeJs_StaticWebapp.yaml@main
     with:
       package-path: .
 

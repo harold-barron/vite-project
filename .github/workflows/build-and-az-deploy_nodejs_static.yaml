@@ -1,0 +1,21 @@
+name: Build and Deploy
+
+on:
+  # Uncomment the following lines to enable the workflow on push to the main branch
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: harold-barron/actions/.github/workflows/buildNodeJs_StaticWebapp.yaml@main
+    with:
+      package-path: .
+    env:
+      hasWebConfig: false
+
+  deploy:
+    needs: build
+    uses: harold-barron/actions/.github/workflows/deploy_Node_Azure_static.yaml@main
+    secrets: inherit
+      

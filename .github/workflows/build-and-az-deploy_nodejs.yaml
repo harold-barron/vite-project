@@ -14,6 +14,6 @@ jobs:
 
   deploy:
     needs: build
-    uses: harold-barron/actions/.github/workflows/deploy_Node_Azure_static.yaml@main
+    uses: harold-barron/actions/.github/workflows/deploy_Node_Azure.yaml@main
     secrets: inherit
       
